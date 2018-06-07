@@ -7,22 +7,13 @@
 //
 
 import UIKit
+import Apollo
+import Kingfisher
 
 class TableViewCell: UITableViewCell {
-//    override var frame: CGRect {
-//        get {
-//            return super.frame
-//        }
-//        set (newFrame) {
-//            var frame = newFrame
-//            frame.size.height = 200
-//            super.frame = frame
-//        }
-//    }
     @IBOutlet weak var tableImage: UIImageView!
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellLocation: UILabel!
-    
 }
 
 class TableViewController: UITableViewController {
@@ -32,9 +23,22 @@ class TableViewController: UITableViewController {
                   "Kiwi fruit", "Lemon", "Lime", "Lychee", "Mandarine", "Mango",
                   "Melon", "Nectarine", "Olive", "Orange", "Papaya", "Peach",
                   "Pear", "Pineapple", "Raspberry", "Strawberry"]
+    
+    var events: [EventDetails]! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        apollo.fetch(query: EventsQuery(name: "cannabis")) { [weak self] result, error in
+            guard let events = result?.data?.eventbrite else { return }
+            self?.events = events.map { ($0?.fragments.eventDetails)! }
+//            print(self?.events!)
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -56,17 +60,22 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let events = self.events else { return 0 }
         // #warning Incomplete implementation, return the number of rows
-        return fruits.count
+        return events.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableViewCell
-        
-        cell.tableImage?.image = UIImage(named: "Polygon")
-        cell.cellTitle?.text = fruits[indexPath.row]
-        cell.cellLocation.text = "San Francisco"
+        guard let events = self.events else { return UITableViewCell() }
+        let eventDetails = events[indexPath.row]
+        let url = URL(string: (eventDetails.logo?.url)!)!
+        let resource = ImageResource(downloadURL: url)
+        let image = UIImage(named: "Polygon")
+        cell.tableImage.kf.setImage(with: resource, placeholder: image)
+        cell.cellTitle?.text = eventDetails.name?.text
+        cell.cellLocation.text = eventDetails.venue?.name
         
         return cell
     }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -310,40 +311,58 @@
         <scene sceneID="gts-YX-pw3">
             <objects>
                 <tableViewController id="hcM-Oi-3Pf" customClass="TableViewController" customModule="Bluntly_dev" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="200" estimatedRowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="4wH-C3-bS9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="258" estimatedRowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="4wH-C3-bS9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="200" id="Hvm-1k-0Gl" customClass="TableViewCell" customModule="Bluntly_dev" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="258" id="Hvm-1k-0Gl" customClass="TableViewCell" customModule="Bluntly_dev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="258"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hvm-1k-0Gl" id="z9B-dz-mzT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="257.66666666666669"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BlI-Zl-tYw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BlI-Zl-tYw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="128" id="Bey-kw-fUk"/>
-                                                <constraint firstAttribute="width" constant="375" id="tCY-gz-nA4"/>
+                                                <constraint firstAttribute="width" constant="375" id="0vu-BC-h0z"/>
+                                                <constraint firstAttribute="height" constant="186" id="WPG-oN-nh7"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmu-lt-zsz">
-                                            <rect key="frame" x="16" y="136" width="343" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmu-lt-zsz">
+                                            <rect key="frame" x="16" y="194" width="343" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="8Gj-7r-V5n"/>
+                                                <constraint firstAttribute="width" constant="343" id="IYC-j8-QjC"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urA-GU-lHc">
-                                            <rect key="frame" x="16" y="168" width="343" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urA-GU-lHc">
+                                            <rect key="frame" x="16" y="226" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="343" id="Vvf-eb-naS"/>
+                                                <constraint firstAttribute="height" constant="21" id="hb6-Ie-Ez0"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fmu-lt-zsz" firstAttribute="top" secondItem="BlI-Zl-tYw" secondAttribute="bottom" constant="8" id="BH6-BU-tKT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="BlI-Zl-tYw" secondAttribute="trailing" constant="-16" id="GO0-M5-UoK"/>
+                                        <constraint firstItem="BlI-Zl-tYw" firstAttribute="leading" secondItem="z9B-dz-mzT" secondAttribute="leadingMargin" constant="-16" id="KT1-i9-GFk"/>
+                                        <constraint firstItem="urA-GU-lHc" firstAttribute="bottom" secondItem="z9B-dz-mzT" secondAttribute="bottomMargin" id="OVB-f4-asz"/>
+                                        <constraint firstItem="fmu-lt-zsz" firstAttribute="leading" secondItem="z9B-dz-mzT" secondAttribute="leadingMargin" id="Qm3-Kk-a7s"/>
+                                        <constraint firstItem="urA-GU-lHc" firstAttribute="trailing" secondItem="z9B-dz-mzT" secondAttribute="trailingMargin" id="TfH-mu-Xir"/>
+                                        <constraint firstItem="BlI-Zl-tYw" firstAttribute="top" secondItem="z9B-dz-mzT" secondAttribute="topMargin" constant="-11" id="b0T-Un-Kty"/>
+                                        <constraint firstItem="urA-GU-lHc" firstAttribute="top" secondItem="fmu-lt-zsz" secondAttribute="bottom" constant="6" id="c7J-g9-ae4"/>
+                                        <constraint firstItem="urA-GU-lHc" firstAttribute="leading" secondItem="z9B-dz-mzT" secondAttribute="leadingMargin" id="d6L-lr-mHx"/>
+                                        <constraint firstItem="fmu-lt-zsz" firstAttribute="trailing" secondItem="z9B-dz-mzT" secondAttribute="trailingMargin" id="i6k-HA-NiX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.73040066748154509" green="0.54975313358840894" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
