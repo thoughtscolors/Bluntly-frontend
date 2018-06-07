@@ -114,6 +114,18 @@
               "deprecationReason": null
             },
             {
+              "name": "preview_url",
+              "description": "",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "preview_url_42",
               "description": "",
               "args": [],

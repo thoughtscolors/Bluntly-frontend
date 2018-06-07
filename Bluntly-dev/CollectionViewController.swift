@@ -7,26 +7,45 @@
 //
 
 import UIKit
+import Apollo
+import Kingfisher
 
-private let reuseIdentifier = "Cell"
+
 
 class Cell: UICollectionViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
 
+    @IBOutlet weak var iconImage: UIImageView!
+    
 }
 
 class CollectionViewController: UICollectionViewController {
-
+    
+    var icons: [IconDetails]! {
+        didSet {
+            collectionView!.reloadData()
+        }
+    }
+    
+    let imageView : UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named:"space")
+        iv.contentMode = .scaleAspectFill
+        return iv
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView?.backgroundView = imageView
+        apollo.fetch(query: IconsQuery(name: "cannabis")) { [weak self] result, error in
+            guard let icons = result?.data?.searchNounProj else { return }
+            self?.icons = icons.map { ($0?.fragments.iconDetails)! }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
 
         // Do any additional setup after loading the view.
     }
@@ -56,17 +75,29 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 9
+        guard let icons = self.icons else { return 0}
+        return icons.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollCell", for: indexPath) as! Cell
     
-        cell.titleLabel?.text = "Squares"
-        cell.contentLabel?.text = "Triangles"
+        guard let icons = self.icons else { return UICollectionViewCell() }
+        let iconDetails = icons[indexPath.row]
+        var url = URL(string: "https://d30y9cdsu7xlg0.cloudfront.net/png/137356-84.png")!
+        if (iconDetails.previewUrl != nil) {
+            url = URL(string: (iconDetails.previewUrl)!)!
+        }
+        let resource = ImageResource(downloadURL: url)
+        let imageView = UIImageView(image: UIImage(named: iconDetails.previewUrl_84!))
+        imageView.setImageColor(color: UIColor.purple)
+        let image = UIImage(named: "Polygon")
+        cell.iconImage.kf.setImage(with: resource, placeholder: image)
+        
     
         return cell
     }
+    
 
     // MARK: UICollectionViewDelegate
 
@@ -99,4 +130,13 @@ class CollectionViewController: UICollectionViewController {
     }
     */
 
+
+}
+
+extension UIImageView {
+    func setImageColor(color: UIColor) {
+        let templateImage = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.image = templateImage
+        self.tintColor = color
+    }
 }

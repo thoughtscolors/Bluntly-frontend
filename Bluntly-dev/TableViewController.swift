@@ -70,7 +70,10 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableViewCell
         guard let events = self.events else { return UITableViewCell() }
         let eventDetails = events[indexPath.row]
-        let url = URL(string: (eventDetails.logo?.url)!)!
+        var url = URL(string: "https://cdn.herb.co/wp-content/uploads/2017/03/7_Things_Youll_1.jpg")!
+        if (eventDetails.logo?.url != nil) {
+            url = URL(string: (eventDetails.logo?.url)!)!
+        }
         let resource = ImageResource(downloadURL: url)
         let image = UIImage(named: "Polygon")
         cell.tableImage.kf.setImage(with: resource, placeholder: image)

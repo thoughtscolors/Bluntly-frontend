@@ -477,7 +477,9 @@ public final class EventsQuery: GraphQLQuery {
 
 public final class IconsQuery: GraphQLQuery {
   public static let operationString =
-    "query Icons($name: String!) {\n  SearchNounProj(name: $name) {\n    __typename\n    id\n    preview_url_42\n    preview_url_84\n  }\n}"
+    "query Icons($name: String!) {\n  SearchNounProj(name: $name) {\n    __typename\n    ...IconDetails\n  }\n}"
+
+  public static var requestString: String { return operationString.appending(IconDetails.fragmentString) }
 
   public var name: String
 
@@ -520,7 +522,9 @@ public final class IconsQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("id", type: .scalar(String.self)),
+        GraphQLField("preview_url", type: .scalar(String.self)),
         GraphQLField("preview_url_42", type: .scalar(String.self)),
         GraphQLField("preview_url_84", type: .scalar(String.self)),
       ]
@@ -531,8 +535,8 @@ public final class IconsQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(id: String? = nil, previewUrl_42: String? = nil, previewUrl_84: String? = nil) {
-        self.init(snapshot: ["__typename": "Icon", "id": id, "preview_url_42": previewUrl_42, "preview_url_84": previewUrl_84])
+      public init(id: String? = nil, previewUrl: String? = nil, previewUrl_42: String? = nil, previewUrl_84: String? = nil) {
+        self.init(snapshot: ["__typename": "Icon", "id": id, "preview_url": previewUrl, "preview_url_42": previewUrl_42, "preview_url_84": previewUrl_84])
       }
 
       public var __typename: String {
@@ -553,6 +557,15 @@ public final class IconsQuery: GraphQLQuery {
         }
       }
 
+      public var previewUrl: String? {
+        get {
+          return snapshot["preview_url"] as? String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "preview_url")
+        }
+      }
+
       public var previewUrl_42: String? {
         get {
           return snapshot["preview_url_42"] as? String
@@ -568,6 +581,28 @@ public final class IconsQuery: GraphQLQuery {
         }
         set {
           snapshot.updateValue(newValue, forKey: "preview_url_84")
+        }
+      }
+
+      public var fragments: Fragments {
+        get {
+          return Fragments(snapshot: snapshot)
+        }
+        set {
+          snapshot += newValue.snapshot
+        }
+      }
+
+      public struct Fragments {
+        public var snapshot: Snapshot
+
+        public var iconDetails: IconDetails {
+          get {
+            return IconDetails(snapshot: snapshot)
+          }
+          set {
+            snapshot += newValue.snapshot
+          }
         }
       }
     }
@@ -979,6 +1014,76 @@ public struct EventDetails: GraphQLFragment {
       set {
         snapshot.updateValue(newValue, forKey: "longitude")
       }
+    }
+  }
+}
+
+public struct IconDetails: GraphQLFragment {
+  public static let fragmentString =
+    "fragment IconDetails on Icon {\n  __typename\n  id\n  preview_url\n  preview_url_42\n  preview_url_84\n}"
+
+  public static let possibleTypes = ["Icon"]
+
+  public static let selections: [GraphQLSelection] = [
+    GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+    GraphQLField("id", type: .scalar(String.self)),
+    GraphQLField("preview_url", type: .scalar(String.self)),
+    GraphQLField("preview_url_42", type: .scalar(String.self)),
+    GraphQLField("preview_url_84", type: .scalar(String.self)),
+  ]
+
+  public var snapshot: Snapshot
+
+  public init(snapshot: Snapshot) {
+    self.snapshot = snapshot
+  }
+
+  public init(id: String? = nil, previewUrl: String? = nil, previewUrl_42: String? = nil, previewUrl_84: String? = nil) {
+    self.init(snapshot: ["__typename": "Icon", "id": id, "preview_url": previewUrl, "preview_url_42": previewUrl_42, "preview_url_84": previewUrl_84])
+  }
+
+  public var __typename: String {
+    get {
+      return snapshot["__typename"]! as! String
+    }
+    set {
+      snapshot.updateValue(newValue, forKey: "__typename")
+    }
+  }
+
+  public var id: String? {
+    get {
+      return snapshot["id"] as? String
+    }
+    set {
+      snapshot.updateValue(newValue, forKey: "id")
+    }
+  }
+
+  public var previewUrl: String? {
+    get {
+      return snapshot["preview_url"] as? String
+    }
+    set {
+      snapshot.updateValue(newValue, forKey: "preview_url")
+    }
+  }
+
+  public var previewUrl_42: String? {
+    get {
+      return snapshot["preview_url_42"] as? String
+    }
+    set {
+      snapshot.updateValue(newValue, forKey: "preview_url_42")
+    }
+  }
+
+  public var previewUrl_84: String? {
+    get {
+      return snapshot["preview_url_84"] as? String
+    }
+    set {
+      snapshot.updateValue(newValue, forKey: "preview_url_84")
     }
   }
 }

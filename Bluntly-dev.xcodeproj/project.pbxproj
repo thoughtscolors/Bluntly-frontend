@@ -14,7 +14,6 @@
 		1889D40F20C38DC600E060E2 /* Bluntly_devUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D40E20C38DC600E060E2 /* Bluntly_devUITests.swift */; };
 		1889D41F20C39AA400E060E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1889D41E20C39AA400E060E2 /* Assets.xcassets */; };
 		1889D42120C3ACD700E060E2 /* CarroisGothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */; };
-		1889D43520C65DD300E060E2 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1889D43420C65DD300E060E2 /* schema.json */; };
 		1889D43D20C6610700E060E2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1889D43C20C6610700E060E2 /* Podfile */; };
 		1889D43F20C6627100E060E2 /* Events.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1889D43E20C6627100E060E2 /* Events.graphql */; };
 		1889D44120C6627D00E060E2 /* Icons.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1889D44020C6627D00E060E2 /* Icons.graphql */; };
@@ -57,7 +56,6 @@
 		1889D41020C38DC600E060E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1889D41E20C39AA400E060E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarroisGothic-Regular.ttf"; sourceTree = "<group>"; };
-		1889D43420C65DD300E060E2 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		1889D43C20C6610700E060E2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1889D43E20C6627100E060E2 /* Events.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Events.graphql; sourceTree = "<group>"; };
 		1889D44020C6627D00E060E2 /* Icons.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Icons.graphql; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				18958F4620C8B09200B14010 /* CollectionViewController.swift */,
 				1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */,
 				1889D41E20C39AA400E060E2 /* Assets.xcassets */,
-				1889D43420C65DD300E060E2 /* schema.json */,
 				1889D3F720C38DC500E060E2 /* LaunchScreen.storyboard */,
 				1889D3FA20C38DC500E060E2 /* Info.plist */,
 			);
@@ -294,7 +291,6 @@
 				1889D43D20C6610700E060E2 /* Podfile in Resources */,
 				1889D43F20C6627100E060E2 /* Events.graphql in Resources */,
 				1889D3F920C38DC500E060E2 /* LaunchScreen.storyboard in Resources */,
-				1889D43520C65DD300E060E2 /* schema.json in Resources */,
 				1889D42120C3ACD700E060E2 /* CarroisGothic-Regular.ttf in Resources */,
 				1889D41F20C39AA400E060E2 /* Assets.xcassets in Resources */,
 				1889D44120C6627D00E060E2 /* Icons.graphql in Resources */,
