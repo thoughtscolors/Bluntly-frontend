@@ -1,0 +1,30 @@
+query Events($name: String!){
+    Eventbrite(name: $name) {
+        name {
+            text
+        }
+        url
+        description {
+            text
+        }
+        start {
+            timezone
+            local
+        }
+        end {
+            timezone
+            local
+            }
+        logo {
+            url
+            original {
+                url
+            }
+            }
+            venue {
+                name
+                latitude
+                longitude
+            }
+        }
+}

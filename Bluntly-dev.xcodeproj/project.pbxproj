@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1889D3EF20C38DC500E060E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D3EE20C38DC500E060E2 /* AppDelegate.swift */; };
+		1889D3F420C38DC500E060E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1889D3F220C38DC500E060E2 /* Main.storyboard */; };
+		1889D3F920C38DC500E060E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1889D3F720C38DC500E060E2 /* LaunchScreen.storyboard */; };
+		1889D40420C38DC600E060E2 /* Bluntly_devTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D40320C38DC600E060E2 /* Bluntly_devTests.swift */; };
+		1889D40F20C38DC600E060E2 /* Bluntly_devUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D40E20C38DC600E060E2 /* Bluntly_devUITests.swift */; };
+		1889D41F20C39AA400E060E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1889D41E20C39AA400E060E2 /* Assets.xcassets */; };
+		1889D42120C3ACD700E060E2 /* CarroisGothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */; };
+		1889D43520C65DD300E060E2 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1889D43420C65DD300E060E2 /* schema.json */; };
+		1889D43D20C6610700E060E2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1889D43C20C6610700E060E2 /* Podfile */; };
+		1889D43F20C6627100E060E2 /* Events.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1889D43E20C6627100E060E2 /* Events.graphql */; };
+		1889D44120C6627D00E060E2 /* Icons.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1889D44020C6627D00E060E2 /* Icons.graphql */; };
+		1889D44320C6654E00E060E2 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D44220C6654E00E060E2 /* EventsViewController.swift */; };
+		1889D44520C665C700E060E2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D44420C665C600E060E2 /* API.swift */; };
+		1889D44720C668D000E060E2 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D44620C668D000E060E2 /* InterestsViewController.swift */; };
+		18958F4720C8B09300B14010 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F4620C8B09200B14010 /* CollectionViewController.swift */; };
+		18958F4920C8B7EE00B14010 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F4820C8B7EE00B14010 /* TableViewController.swift */; };
+		CD538552D8662C9718572A68 /* Pods_Bluntly_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1889D40020C38DC600E060E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1889D3E320C38DC500E060E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1889D3EA20C38DC500E060E2;
+			remoteInfo = "Bluntly-dev";
+		};
+		1889D40B20C38DC600E060E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1889D3E320C38DC500E060E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1889D3EA20C38DC500E060E2;
+			remoteInfo = "Bluntly-dev";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1889D3EB20C38DC500E060E2 /* Bluntly-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluntly-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1889D3EE20C38DC500E060E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1889D3F320C38DC500E060E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1889D3F820C38DC500E060E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1889D3FA20C38DC500E060E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1889D3FF20C38DC600E060E2 /* Bluntly-devTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluntly-devTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1889D40320C38DC600E060E2 /* Bluntly_devTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluntly_devTests.swift; sourceTree = "<group>"; };
+		1889D40520C38DC600E060E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1889D40A20C38DC600E060E2 /* Bluntly-devUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluntly-devUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1889D40E20C38DC600E060E2 /* Bluntly_devUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluntly_devUITests.swift; sourceTree = "<group>"; };
+		1889D41020C38DC600E060E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1889D41E20C39AA400E060E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarroisGothic-Regular.ttf"; sourceTree = "<group>"; };
+		1889D43420C65DD300E060E2 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		1889D43C20C6610700E060E2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1889D43E20C6627100E060E2 /* Events.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Events.graphql; sourceTree = "<group>"; };
+		1889D44020C6627D00E060E2 /* Icons.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Icons.graphql; sourceTree = "<group>"; };
+		1889D44220C6654E00E060E2 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		1889D44420C665C600E060E2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Bluntly-dev/API.swift"; sourceTree = SOURCE_ROOT; };
+		1889D44620C668D000E060E2 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		18958F4620C8B09200B14010 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		18958F4820C8B7EE00B14010 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9437ECB9BFB8BAF3066AE44C /* Pods-Bluntly-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.debug.xcconfig"; sourceTree = "<group>"; };
+		D371F233610D78A91D13BE6B /* Pods-Bluntly-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.release.xcconfig"; sourceTree = "<group>"; };
+		D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluntly_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1889D3E820C38DC500E060E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD538552D8662C9718572A68 /* Pods_Bluntly_dev.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1889D3FC20C38DC600E060E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1889D40720C38DC600E060E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1889D3E220C38DC500E060E2 = {
+			isa = PBXGroup;
+			children = (
+				1889D43C20C6610700E060E2 /* Podfile */,
+				1889D3ED20C38DC500E060E2 /* Bluntly-dev */,
+				1889D40220C38DC600E060E2 /* Bluntly-devTests */,
+				1889D40D20C38DC600E060E2 /* Bluntly-devUITests */,
+				1889D3EC20C38DC500E060E2 /* Products */,
+				CBA29A364D5E95ACC1CCB3A9 /* Pods */,
+				A688AF18B8896D55A13F4D62 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1889D3EC20C38DC500E060E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1889D3EB20C38DC500E060E2 /* Bluntly-dev.app */,
+				1889D3FF20C38DC600E060E2 /* Bluntly-devTests.xctest */,
+				1889D40A20C38DC600E060E2 /* Bluntly-devUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1889D3ED20C38DC500E060E2 /* Bluntly-dev */ = {
+			isa = PBXGroup;
+			children = (
+				1889D3EE20C38DC500E060E2 /* AppDelegate.swift */,
+				1889D43820C65F1000E060E2 /* GraphQL */,
+				1889D44620C668D000E060E2 /* InterestsViewController.swift */,
+				1889D44220C6654E00E060E2 /* EventsViewController.swift */,
+				1889D3F220C38DC500E060E2 /* Main.storyboard */,
+				18958F4820C8B7EE00B14010 /* TableViewController.swift */,
+				18958F4620C8B09200B14010 /* CollectionViewController.swift */,
+				1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */,
+				1889D41E20C39AA400E060E2 /* Assets.xcassets */,
+				1889D43420C65DD300E060E2 /* schema.json */,
+				1889D3F720C38DC500E060E2 /* LaunchScreen.storyboard */,
+				1889D3FA20C38DC500E060E2 /* Info.plist */,
+			);
+			path = "Bluntly-dev";
+			sourceTree = "<group>";
+		};
+		1889D40220C38DC600E060E2 /* Bluntly-devTests */ = {
+			isa = PBXGroup;
+			children = (
+				1889D40320C38DC600E060E2 /* Bluntly_devTests.swift */,
+				1889D40520C38DC600E060E2 /* Info.plist */,
+			);
+			path = "Bluntly-devTests";
+			sourceTree = "<group>";
+		};
+		1889D40D20C38DC600E060E2 /* Bluntly-devUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1889D40E20C38DC600E060E2 /* Bluntly_devUITests.swift */,
+				1889D41020C38DC600E060E2 /* Info.plist */,
+			);
+			path = "Bluntly-devUITests";
+			sourceTree = "<group>";
+		};
+		1889D43820C65F1000E060E2 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				1889D44420C665C600E060E2 /* API.swift */,
+				1889D43E20C6627100E060E2 /* Events.graphql */,
+				1889D44020C6627D00E060E2 /* Icons.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		A688AF18B8896D55A13F4D62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBA29A364D5E95ACC1CCB3A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9437ECB9BFB8BAF3066AE44C /* Pods-Bluntly-dev.debug.xcconfig */,
+				D371F233610D78A91D13BE6B /* Pods-Bluntly-dev.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1889D3EA20C38DC500E060E2 /* Bluntly-dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1889D41320C38DC600E060E2 /* Build configuration list for PBXNativeTarget "Bluntly-dev" */;
+			buildPhases = (
+				D483967FDFB34B78311EF091 /* [CP] Check Pods Manifest.lock */,
+				1889D43320C65BA300E060E2 /* Generate Apollo GraphQL API */,
+				1889D3E720C38DC500E060E2 /* Sources */,
+				1889D3E820C38DC500E060E2 /* Frameworks */,
+				1889D3E920C38DC500E060E2 /* Resources */,
+				409784CECC772192B0E13BEF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bluntly-dev";
+			productName = "Bluntly-dev";
+			productReference = 1889D3EB20C38DC500E060E2 /* Bluntly-dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1889D3FE20C38DC600E060E2 /* Bluntly-devTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1889D41620C38DC600E060E2 /* Build configuration list for PBXNativeTarget "Bluntly-devTests" */;
+			buildPhases = (
+				1889D3FB20C38DC600E060E2 /* Sources */,
+				1889D3FC20C38DC600E060E2 /* Frameworks */,
+				1889D3FD20C38DC600E060E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1889D40120C38DC600E060E2 /* PBXTargetDependency */,
+			);
+			name = "Bluntly-devTests";
+			productName = "Bluntly-devTests";
+			productReference = 1889D3FF20C38DC600E060E2 /* Bluntly-devTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1889D40920C38DC600E060E2 /* Bluntly-devUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1889D41920C38DC600E060E2 /* Build configuration list for PBXNativeTarget "Bluntly-devUITests" */;
+			buildPhases = (
+				1889D40620C38DC600E060E2 /* Sources */,
+				1889D40720C38DC600E060E2 /* Frameworks */,
+				1889D40820C38DC600E060E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1889D40C20C38DC600E060E2 /* PBXTargetDependency */,
+			);
+			name = "Bluntly-devUITests";
+			productName = "Bluntly-devUITests";
+			productReference = 1889D40A20C38DC600E060E2 /* Bluntly-devUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1889D3E320C38DC500E060E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = MEEU;
+				TargetAttributes = {
+					1889D3EA20C38DC500E060E2 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					1889D3FE20C38DC600E060E2 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 1889D3EA20C38DC500E060E2;
+					};
+					1889D40920C38DC600E060E2 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 1889D3EA20C38DC500E060E2;
+					};
+				};
+			};
+			buildConfigurationList = 1889D3E620C38DC500E060E2 /* Build configuration list for PBXProject "Bluntly-dev" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1889D3E220C38DC500E060E2;
+			productRefGroup = 1889D3EC20C38DC500E060E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1889D3EA20C38DC500E060E2 /* Bluntly-dev */,
+				1889D3FE20C38DC600E060E2 /* Bluntly-devTests */,
+				1889D40920C38DC600E060E2 /* Bluntly-devUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1889D3E920C38DC500E060E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1889D43D20C6610700E060E2 /* Podfile in Resources */,
+				1889D43F20C6627100E060E2 /* Events.graphql in Resources */,
+				1889D3F920C38DC500E060E2 /* LaunchScreen.storyboard in Resources */,
+				1889D43520C65DD300E060E2 /* schema.json in Resources */,
+				1889D42120C3ACD700E060E2 /* CarroisGothic-Regular.ttf in Resources */,
+				1889D41F20C39AA400E060E2 /* Assets.xcassets in Resources */,
+				1889D44120C6627D00E060E2 /* Icons.graphql in Resources */,
+				1889D3F420C38DC500E060E2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1889D3FD20C38DC600E060E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1889D40820C38DC600E060E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1889D43320C65BA300E060E2 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+		};
+		409784CECC772192B0E13BEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D483967FDFB34B78311EF091 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bluntly-dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1889D3E720C38DC500E060E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1889D3EF20C38DC500E060E2 /* AppDelegate.swift in Sources */,
+				18958F4920C8B7EE00B14010 /* TableViewController.swift in Sources */,
+				1889D44520C665C700E060E2 /* API.swift in Sources */,
+				1889D44320C6654E00E060E2 /* EventsViewController.swift in Sources */,
+				1889D44720C668D000E060E2 /* InterestsViewController.swift in Sources */,
+				18958F4720C8B09300B14010 /* CollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1889D3FB20C38DC600E060E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1889D40420C38DC600E060E2 /* Bluntly_devTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1889D40620C38DC600E060E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1889D40F20C38DC600E060E2 /* Bluntly_devUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1889D40120C38DC600E060E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1889D3EA20C38DC500E060E2 /* Bluntly-dev */;
+			targetProxy = 1889D40020C38DC600E060E2 /* PBXContainerItemProxy */;
+		};
+		1889D40C20C38DC600E060E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1889D3EA20C38DC500E060E2 /* Bluntly-dev */;
+			targetProxy = 1889D40B20C38DC600E060E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1889D3F220C38DC500E060E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1889D3F320C38DC500E060E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1889D3F720C38DC500E060E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1889D3F820C38DC500E060E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1889D41120C38DC600E060E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1889D41220C38DC600E060E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1889D41420C38DC600E060E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9437ECB9BFB8BAF3066AE44C /* Pods-Bluntly-dev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bluntly-dev/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluntly.Bluntly-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1889D41520C38DC600E060E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D371F233610D78A91D13BE6B /* Pods-Bluntly-dev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bluntly-dev/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluntly.Bluntly-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1889D41720C38DC600E060E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bluntly-devTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluntly.Bluntly-devTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bluntly-dev.app/Bluntly-dev";
+			};
+			name = Debug;
+		};
+		1889D41820C38DC600E060E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bluntly-devTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluntly.Bluntly-devTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bluntly-dev.app/Bluntly-dev";
+			};
+			name = Release;
+		};
+		1889D41A20C38DC600E060E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bluntly-devUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluntly.Bluntly-devUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bluntly-dev";
+			};
+			name = Debug;
+		};
+		1889D41B20C38DC600E060E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Bluntly-devUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bluntly.Bluntly-devUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bluntly-dev";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1889D3E620C38DC500E060E2 /* Build configuration list for PBXProject "Bluntly-dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1889D41120C38DC600E060E2 /* Debug */,
+				1889D41220C38DC600E060E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1889D41320C38DC600E060E2 /* Build configuration list for PBXNativeTarget "Bluntly-dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1889D41420C38DC600E060E2 /* Debug */,
+				1889D41520C38DC600E060E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1889D41620C38DC600E060E2 /* Build configuration list for PBXNativeTarget "Bluntly-devTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1889D41720C38DC600E060E2 /* Debug */,
+				1889D41820C38DC600E060E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1889D41920C38DC600E060E2 /* Build configuration list for PBXNativeTarget "Bluntly-devUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1889D41A20C38DC600E060E2 /* Debug */,
+				1889D41B20C38DC600E060E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1889D3E320C38DC500E060E2 /* Project object */;
+}

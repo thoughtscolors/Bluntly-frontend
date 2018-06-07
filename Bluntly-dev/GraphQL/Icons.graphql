@@ -1,0 +1,9 @@
+query Icons($name: String!){
+    SearchNounProj(name: $name) {
+        id
+        preview_url_42
+        preview_url_84
+    }
+}
+
+
