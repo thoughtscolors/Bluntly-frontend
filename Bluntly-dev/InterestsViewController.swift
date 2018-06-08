@@ -71,28 +71,154 @@ class InterestsViewController: UIViewController {
         switch imageIndex {
             case 1:
             imageView1.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView1.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView1.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView1.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 2:
             imageView2.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView2.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView2.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView2.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 3:
             imageView3.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView3.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView3.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView3.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 4:
             imageView4.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView4.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView4.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView4.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 5:
             imageView5.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView5.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView5.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView5.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 6:
             imageView6.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView6.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView6.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView6.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 7:
             imageView7.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView7.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView7.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView7.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 8:
             imageView8.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView8.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView8.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView8.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
             case 9:
             imageView9.kf.setImage(with: resource, placeholder: image)
+            let originalTransform = imageView9.transform
+            let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
+            let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                           animations: {
+                            self.imageView9.transform = scaledTransform
+                            UIView.animate(withDuration: 0.5, delay: 0.7, options: [],
+                                           animations: {
+                                            
+                                            self.imageView9.transform = finalTransform
+                                            
+                            }, completion: nil)
+                            
+            }, completion: nil)
         default:
             return
         }
-       
-      
     }
+    
+    
 
     /*
     // MARK: - Navigation
