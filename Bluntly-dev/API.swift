@@ -609,6 +609,97 @@ public final class IconsQuery: GraphQLQuery {
   }
 }
 
+public final class AddInterestMutation: GraphQLMutation {
+  public static let operationString =
+    "mutation AddInterest($userID: String!, $name: String!) {\n  addInterest(userID: $userID, name: $name) {\n    __typename\n    name\n    ok\n  }\n}"
+
+  public var userID: String
+  public var name: String
+
+  public init(userID: String, name: String) {
+    self.userID = userID
+    self.name = name
+  }
+
+  public var variables: GraphQLMap? {
+    return ["userID": userID, "name": name]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes = ["Mutation"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("addInterest", arguments: ["userID": GraphQLVariable("userID"), "name": GraphQLVariable("name")], type: .nonNull(.object(AddInterest.selections))),
+    ]
+
+    public var snapshot: Snapshot
+
+    public init(snapshot: Snapshot) {
+      self.snapshot = snapshot
+    }
+
+    public init(addInterest: AddInterest) {
+      self.init(snapshot: ["__typename": "Mutation", "addInterest": addInterest.snapshot])
+    }
+
+    public var addInterest: AddInterest {
+      get {
+        return AddInterest(snapshot: snapshot["addInterest"]! as! Snapshot)
+      }
+      set {
+        snapshot.updateValue(newValue.snapshot, forKey: "addInterest")
+      }
+    }
+
+    public struct AddInterest: GraphQLSelectionSet {
+      public static let possibleTypes = ["Response"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("ok", type: .nonNull(.scalar(Bool.self))),
+      ]
+
+      public var snapshot: Snapshot
+
+      public init(snapshot: Snapshot) {
+        self.snapshot = snapshot
+      }
+
+      public init(name: String, ok: Bool) {
+        self.init(snapshot: ["__typename": "Response", "name": name, "ok": ok])
+      }
+
+      public var __typename: String {
+        get {
+          return snapshot["__typename"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var name: String {
+        get {
+          return snapshot["name"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      public var ok: Bool {
+        get {
+          return snapshot["ok"]! as! Bool
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "ok")
+        }
+      }
+    }
+  }
+}
+
 public struct EventDetails: GraphQLFragment {
   public static let fragmentString =
     "fragment EventDetails on Event {\n  __typename\n  name {\n    __typename\n    text\n  }\n  url\n  description {\n    __typename\n    text\n  }\n  start {\n    __typename\n    timezone\n    local\n  }\n  end {\n    __typename\n    timezone\n    local\n  }\n  logo {\n    __typename\n    url\n    original {\n      __typename\n      url\n    }\n  }\n  venue {\n    __typename\n    name\n    latitude\n    longitude\n  }\n}"

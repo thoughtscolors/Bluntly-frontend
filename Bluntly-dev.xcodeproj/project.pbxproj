@@ -20,8 +20,9 @@
 		1889D44320C6654E00E060E2 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D44220C6654E00E060E2 /* EventsViewController.swift */; };
 		1889D44520C665C700E060E2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D44420C665C600E060E2 /* API.swift */; };
 		1889D44720C668D000E060E2 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D44620C668D000E060E2 /* InterestsViewController.swift */; };
-		18958F4720C8B09300B14010 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F4620C8B09200B14010 /* CollectionViewController.swift */; };
 		18958F4920C8B7EE00B14010 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F4820C8B7EE00B14010 /* TableViewController.swift */; };
+		18958F5120CA0AC500B14010 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F5020CA0AC500B14010 /* LoginViewController.swift */; };
+		18958F5B20CA1E9B00B14010 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 18958F5A20CA1E9B00B14010 /* schema.json */; };
 		CD538552D8662C9718572A68 /* Pods_Bluntly_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +63,9 @@
 		1889D44220C6654E00E060E2 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		1889D44420C665C600E060E2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Bluntly-dev/API.swift"; sourceTree = SOURCE_ROOT; };
 		1889D44620C668D000E060E2 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
-		18958F4620C8B09200B14010 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		18958F4820C8B7EE00B14010 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		18958F5020CA0AC500B14010 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18958F5A20CA1E9B00B14010 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		9437ECB9BFB8BAF3066AE44C /* Pods-Bluntly-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		D371F233610D78A91D13BE6B /* Pods-Bluntly-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.release.xcconfig"; sourceTree = "<group>"; };
 		D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluntly_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,10 +128,11 @@
 				1889D44620C668D000E060E2 /* InterestsViewController.swift */,
 				1889D44220C6654E00E060E2 /* EventsViewController.swift */,
 				1889D3F220C38DC500E060E2 /* Main.storyboard */,
+				18958F5020CA0AC500B14010 /* LoginViewController.swift */,
 				18958F4820C8B7EE00B14010 /* TableViewController.swift */,
-				18958F4620C8B09200B14010 /* CollectionViewController.swift */,
 				1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */,
 				1889D41E20C39AA400E060E2 /* Assets.xcassets */,
+				18958F5A20CA1E9B00B14010 /* schema.json */,
 				1889D3F720C38DC500E060E2 /* LaunchScreen.storyboard */,
 				1889D3FA20C38DC500E060E2 /* Info.plist */,
 			);
@@ -292,6 +295,7 @@
 				1889D43F20C6627100E060E2 /* Events.graphql in Resources */,
 				1889D3F920C38DC500E060E2 /* LaunchScreen.storyboard in Resources */,
 				1889D42120C3ACD700E060E2 /* CarroisGothic-Regular.ttf in Resources */,
+				18958F5B20CA1E9B00B14010 /* schema.json in Resources */,
 				1889D41F20C39AA400E060E2 /* Assets.xcassets in Resources */,
 				1889D44120C6627D00E060E2 /* Icons.graphql in Resources */,
 				1889D3F420C38DC500E060E2 /* Main.storyboard in Resources */,
@@ -374,12 +378,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18958F5120CA0AC500B14010 /* LoginViewController.swift in Sources */,
 				1889D3EF20C38DC500E060E2 /* AppDelegate.swift in Sources */,
 				18958F4920C8B7EE00B14010 /* TableViewController.swift in Sources */,
 				1889D44520C665C700E060E2 /* API.swift in Sources */,
 				1889D44320C6654E00E060E2 /* EventsViewController.swift in Sources */,
 				1889D44720C668D000E060E2 /* InterestsViewController.swift in Sources */,
-				18958F4720C8B09300B14010 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

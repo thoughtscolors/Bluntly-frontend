@@ -55,7 +55,21 @@ class InterestsViewController: UIViewController {
             self?.icons = icons.map { ($0?.fragments.iconDetails)! }
         }
         self.imageIndex += 1
+        addInterest()
         updateUI()
+    }
+    
+    func addInterest() {
+        let name = searchField.text
+        let userID = "123qwer"
+        let addInterest = AddInterestMutation(userID: userID, name: name!)
+        apollo.perform(mutation: addInterest) { [weak self] result, error in guard let result = result?.data?.addInterest else { return }
+            print(result)
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+        }
     }
     
     func updateUI() {
