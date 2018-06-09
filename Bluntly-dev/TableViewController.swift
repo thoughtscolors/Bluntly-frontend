@@ -33,8 +33,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        apollo.fetch(query: EventsQuery(name: "cannabis")) { [weak self] result, error in
-            guard let events = result?.data?.eventbrite else { return }
+        apollo.fetch(query: AllEventsQuery(userID: "123qwer")) { [weak self] result, error in
+            guard let events = result?.data?.allEventbrite else { return }
             self?.events = events.map { ($0?.fragments.eventDetails)! }
 //            print(self?.events!)
             

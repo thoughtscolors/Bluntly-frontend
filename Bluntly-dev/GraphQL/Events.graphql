@@ -32,3 +32,9 @@ query Events($name: String!){
       ...EventDetails
     }
 }
+
+query allEvents($userID: String!) {
+    allEventbrite(userID: $userID) {
+        ...EventDetails
+    }
+}
