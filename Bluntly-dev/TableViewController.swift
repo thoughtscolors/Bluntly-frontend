@@ -14,6 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var tableImage: UIImageView!
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellLocation: UILabel!
+    @IBOutlet weak var cellDate: UILabel!
 }
 
 class TableViewController: UITableViewController {
@@ -79,6 +80,7 @@ class TableViewController: UITableViewController {
         cell.tableImage.kf.setImage(with: resource, placeholder: image)
         cell.cellTitle?.text = eventDetails.name?.text
         cell.cellLocation.text = eventDetails.venue?.name
+        cell.cellDate.text = eventDetails.start?.local
         
         return cell
     }

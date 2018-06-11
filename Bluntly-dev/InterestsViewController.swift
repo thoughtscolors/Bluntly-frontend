@@ -76,16 +76,16 @@ class InterestsViewController: UIViewController {
     func updateUI() {
         let icons = self.icons
         let iconDetails = icons?[0]
-        var url = URL(string: "https://d30y9cdsu7xlg0.cloudfront.net/png/137356-84.png")!
+        
+        var url = URL(string: "http://gifimage.net/wp-content/uploads/2017/08/loading-animated-gif-3.gif")!
         if (iconDetails?.previewUrl_84 != nil) {
-            url = URL(string: (iconDetails?.previewUrl_84)!)!
+            url = URL(string: (iconDetails!.previewUrl_84)!)!
         }
         let resource = ImageResource(downloadURL: url)
-        let image = UIImage(named: "Polygon")
         let imageIndex = self.imageIndex
         switch imageIndex {
             case 1:
-            imageView1.kf.setImage(with: resource, placeholder: image)
+            imageView1.kf.setImage(with: resource)
             let originalTransform = imageView1.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -101,7 +101,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 2:
-            imageView2.kf.setImage(with: resource, placeholder: image)
+            imageView2.kf.setImage(with: resource)
             let originalTransform = imageView2.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -117,7 +117,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 3:
-            imageView3.kf.setImage(with: resource, placeholder: image)
+            imageView3.kf.setImage(with: resource)
             let originalTransform = imageView3.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -133,7 +133,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 4:
-            imageView4.kf.setImage(with: resource, placeholder: image)
+            imageView4.kf.setImage(with: resource)
             let originalTransform = imageView4.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -149,7 +149,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 5:
-            imageView5.kf.setImage(with: resource, placeholder: image)
+            imageView5.kf.setImage(with: resource)
             let originalTransform = imageView5.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -165,7 +165,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 6:
-            imageView6.kf.setImage(with: resource, placeholder: image)
+            imageView6.kf.setImage(with: resource)
             let originalTransform = imageView6.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -181,7 +181,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 7:
-            imageView7.kf.setImage(with: resource, placeholder: image)
+            imageView7.kf.setImage(with: resource)
             let originalTransform = imageView7.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -197,7 +197,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 8:
-            imageView8.kf.setImage(with: resource, placeholder: image)
+            imageView8.kf.setImage(with: resource)
             let originalTransform = imageView8.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
@@ -213,7 +213,7 @@ class InterestsViewController: UIViewController {
                             
             }, completion: nil)
             case 9:
-            imageView9.kf.setImage(with: resource, placeholder: image)
+            imageView9.kf.setImage(with: resource)
             let originalTransform = imageView9.transform
             let scaledTransform = originalTransform.scaledBy(x: 1.2, y: 1.2)
             let finalTransform = originalTransform.scaledBy(x: 1.0, y: 1.0)
