@@ -59,6 +59,7 @@ class InterestsViewController: UIViewController {
         updateUI()
     }
     
+    
     func addInterest() {
         let name = searchField.text
         let userID = "123qwer"
@@ -284,8 +285,6 @@ extension UITextField {
         }
     }
 }
-
-
 
 
     

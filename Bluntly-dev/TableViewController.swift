@@ -80,7 +80,23 @@ class TableViewController: UITableViewController {
         cell.tableImage.kf.setImage(with: resource, placeholder: image)
         cell.cellTitle?.text = eventDetails.name?.text
         cell.cellLocation.text = eventDetails.venue?.name
-        cell.cellDate.text = eventDetails.start?.local
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d, yyyy, HH:mm"
+        let formatterGet = DateFormatter()
+        formatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        formatter.locale = Locale(identifier: "en_US")
+        var eventDate = "2018-05-29T20:00:00"
+        if (eventDetails.start?.local != nil) {
+            eventDate = (eventDetails.start?.local)!
+        }
+        let date = formatterGet.date(from: eventDate)
+        print(date)
+        if (date != nil) {
+            cell.cellDate.text = formatter.string(from: date!)
+        } else {
+            cell.cellDate.text = formatter.string(from: date!)
+        }
+        
         
         return cell
     }
