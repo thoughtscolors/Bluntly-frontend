@@ -23,6 +23,8 @@ class InterestsViewController: UIViewController {
     
     @IBOutlet weak var searchField: UITextField!
     
+    var user: UserViewController!
+    
     var icons: [IconDetails]! {
         didSet {
             updateUI()
@@ -62,6 +64,8 @@ class InterestsViewController: UIViewController {
     
     func addInterest() {
         let name = searchField.text
+        let email = user.email
+        print("email", email)
         let userID = "123qwer"
         let addInterest = AddInterestMutation(userID: userID, name: name!)
         apollo.perform(mutation: addInterest) { [weak self] result, error in guard let result = result?.data?.addInterest else { return }

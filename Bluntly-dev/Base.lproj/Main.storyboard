@@ -42,7 +42,8 @@
                                     <color key="titleColor" red="0.9831252114372081" green="1" blue="0.9738127346855926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cQT-NZ-qu3" kind="presentation" modalTransitionStyle="crossDissolve" id="vcO-Gu-j0T"/>
+                                    <action selector="login" destination="Jwo-uc-h21" eventType="touchUpInside" id="C1U-I3-Q2O"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Rpf-Zg-3R7"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ii6-Je-s3S">
@@ -64,6 +65,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y7p-Pv-597"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="Mpx-uu-usP" id="c0P-Wo-4aa"/>
+                        <outlet property="pass" destination="ADH-YL-lLY" id="KIn-zh-yVv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqy-q1-KYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -659,9 +664,9 @@
         <image name="space" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xWr-5p-eZl"/>
-        <segue reference="sm8-GL-BxI"/>
-        <segue reference="tAK-a6-hRZ"/>
-        <segue reference="C7E-aY-uvq"/>
+        <segue reference="z2W-5v-I2c"/>
+        <segue reference="BrK-rP-71L"/>
+        <segue reference="Rpf-Zg-3R7"/>
+        <segue reference="p8k-hE-YtR"/>
     </inferredMetricsTieBreakers>
 </document>

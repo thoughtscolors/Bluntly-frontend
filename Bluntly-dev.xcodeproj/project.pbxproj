@@ -23,6 +23,7 @@
 		18958F5120CA0AC500B14010 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F5020CA0AC500B14010 /* LoginViewController.swift */; };
 		18958F5F20CF207200B14010 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F5E20CF207200B14010 /* MenuViewController.swift */; };
 		18958F6120CF2E7900B14010 /* SearchEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F6020CF2E7900B14010 /* SearchEventsViewController.swift */; };
+		18958F6720D0846300B14010 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F6620D0846300B14010 /* UserViewController.swift */; };
 		CD538552D8662C9718572A68 /* Pods_Bluntly_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		18958F5020CA0AC500B14010 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18958F5E20CF207200B14010 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		18958F6020CF2E7900B14010 /* SearchEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventsViewController.swift; sourceTree = "<group>"; };
+		18958F6620D0846300B14010 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		9437ECB9BFB8BAF3066AE44C /* Pods-Bluntly-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		D371F233610D78A91D13BE6B /* Pods-Bluntly-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.release.xcconfig"; sourceTree = "<group>"; };
 		D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluntly_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				18958F5020CA0AC500B14010 /* LoginViewController.swift */,
 				18958F4820C8B7EE00B14010 /* TableViewController.swift */,
 				18958F6020CF2E7900B14010 /* SearchEventsViewController.swift */,
+				18958F6620D0846300B14010 /* UserViewController.swift */,
 				1889D42020C3ACD700E060E2 /* CarroisGothic-Regular.ttf */,
 				1889D41E20C39AA400E060E2 /* Assets.xcassets */,
 				1889D3F720C38DC500E060E2 /* LaunchScreen.storyboard */,
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18958F5120CA0AC500B14010 /* LoginViewController.swift in Sources */,
+				18958F6720D0846300B14010 /* UserViewController.swift in Sources */,
 				1889D3EF20C38DC500E060E2 /* AppDelegate.swift in Sources */,
 				18958F4920C8B7EE00B14010 /* TableViewController.swift in Sources */,
 				18958F6120CF2E7900B14010 /* SearchEventsViewController.swift in Sources */,

@@ -1,40 +1,26 @@
 //
-//  LoginViewController.swift
+//  UserViewController.swift
 //  Bluntly-dev
 //
-//  Created by Apple on 6/7/18.
+//  Created by Apple on 6/12/18.
 //  Copyright © 2018 MEEU. All rights reserved.
 //
 
 import UIKit
 
+class UserViewController: UIViewController {
+    
+    var email: String = ""
 
-class LoginViewController: UIViewController {
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var pass: UITextField!
-    
-    var user: UserViewController!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func login() {
-        let newEmail = emailField.text
-        user.email = newEmail!
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let interestsViewController = segue.destination as? InterestsViewController {
-            interestsViewController.user = UserViewController()
-        }
     }
     
 
