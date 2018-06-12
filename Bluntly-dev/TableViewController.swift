@@ -19,6 +19,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var ticketsButton: UIButton!
     
     @IBOutlet var urlString: String!
+   
+    
     
     
     @IBAction func addToMyEvents() {
@@ -38,8 +40,7 @@ class TableViewCell: UITableViewCell {
 }
 
 class TableViewController: UITableViewController {
-    
-    
+
     var events: [EventDetails]! {
         didSet {
             tableView.reloadData()
@@ -49,9 +50,11 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let sv = UIViewController.displaySpinner(onView: self.view)
         apollo.fetch(query: AllEventsQuery(userID: "123qwer")) { [weak self] result, error in
             guard let events = result?.data?.allEventbrite else { return }
             self?.events = events.map { ($0?.fragments.eventDetails)! }
+            UIViewController.removeSpinner(spinner: sv)
 //            print(self?.events!)
             
         }
@@ -67,6 +70,10 @@ class TableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+
     
     func openLink(index: Int!) {
         print(index)
@@ -173,4 +180,27 @@ class TableViewController: UITableViewController {
     }
     */
 
+}
+
+extension UIViewController {
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.7, green: 0.7, blue: 0.7, alpha: 0.7)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
 }

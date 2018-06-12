@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="0.9831252114372081" green="1" blue="0.9738127346855926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cQT-NZ-qu3" kind="show" id="ykX-cM-jX3"/>
+                                    <segue destination="cQT-NZ-qu3" kind="presentation" modalTransitionStyle="crossDissolve" id="vcO-Gu-j0T"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ii6-Je-s3S">
@@ -89,7 +89,7 @@
                                     <color key="titleColor" red="0.93289365064593066" green="0.17438356047373293" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hcM-Oi-3Pf" kind="show" id="xWr-5p-eZl"/>
+                                    <segue destination="hcM-Oi-3Pf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xWr-5p-eZl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvZ-7K-V2K">
@@ -100,7 +100,7 @@
                                     <color key="titleColor" red="0.93289365059999996" green="0.17438356050000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="tAK-a6-hRZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tAK-a6-hRZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooD-Ac-sX8">
@@ -159,24 +159,6 @@
                                     <constraint firstAttribute="height" constant="22" id="Lkj-BX-ucj"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="SearchBar" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="72N-2w-h0M">
-                                <rect key="frame" x="97" y="129" width="180" height="34"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" searchField="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="2Z6-CI-QEd"/>
-                                    <constraint firstAttribute="height" constant="34" id="dWL-NT-YOw"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                                <connections>
-                                    <action selector="changeSearchBackground" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Oxj-zk-Rvb"/>
-                                    <action selector="search" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="t8k-UP-77G"/>
-                                </connections>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gz7-Mk-SIU">
                                 <rect key="frame" x="169" y="544" width="36" height="36"/>
                                 <constraints>
@@ -259,7 +241,7 @@
                                     <color key="titleColor" red="0.93289365059999996" green="0.17438356050000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hcM-Oi-3Pf" kind="show" id="z2W-5v-I2c"/>
+                                    <segue destination="hcM-Oi-3Pf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="z2W-5v-I2c"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewa-WH-tjo">
@@ -290,12 +272,31 @@
                                     <segue destination="R69-rr-lHQ" kind="presentation" identifier="Menu" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="BrK-rP-71L"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="SearchBar" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="72N-2w-h0M">
+                                <rect key="frame" x="97" y="389" width="180" height="34"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" searchField="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="2Z6-CI-QEd"/>
+                                    <constraint firstAttribute="height" constant="34" id="dWL-NT-YOw"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="changeSearchBackground" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Oxj-zk-Rvb"/>
+                                    <action selector="search" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="t8k-UP-77G"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gz7-Mk-SIU" secondAttribute="trailing" constant="170" id="0Mb-6s-Frs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qP8-oL-DIz" secondAttribute="trailing" constant="16" id="1Cl-tw-afl"/>
                             <constraint firstItem="dx8-1M-CJZ" firstAttribute="top" secondItem="Gz7-Mk-SIU" secondAttribute="bottom" constant="30" id="2Pn-XM-TUK"/>
+                            <constraint firstItem="72N-2w-h0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="3az-ba-TMB"/>
                             <constraint firstItem="IPv-6R-z2x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5I9-O9-pYS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d4g-0n-Zwn" secondAttribute="bottom" constant="99" id="5x6-km-mBT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qd7-Ic-irz" secondAttribute="bottom" constant="65" id="6at-nM-KrA"/>
@@ -309,9 +310,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b0f-Wi-eg7" secondAttribute="trailing" constant="112" id="H3u-42-5vO"/>
                             <constraint firstItem="Gz7-Mk-SIU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="HQi-VP-Myk"/>
                             <constraint firstItem="qP8-oL-DIz" firstAttribute="top" secondItem="b0f-Wi-eg7" secondAttribute="bottom" constant="46" id="LkP-ji-RQd"/>
-                            <constraint firstItem="72N-2w-h0M" firstAttribute="top" secondItem="FkM-8i-uck" secondAttribute="bottom" constant="55" id="N9d-pG-HwP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="72N-2w-h0M" secondAttribute="trailing" constant="98" id="MwD-uq-rdX"/>
                             <constraint firstItem="d4g-0n-Zwn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="Nge-JH-20m"/>
                             <constraint firstItem="FkM-8i-uck" firstAttribute="leading" secondItem="GyS-x1-nV1" secondAttribute="trailing" constant="66" id="Qan-Ii-cu8"/>
+                            <constraint firstItem="72N-2w-h0M" firstAttribute="top" secondItem="FkM-8i-uck" secondAttribute="bottom" constant="315" id="RN5-Vm-ir1"/>
                             <constraint firstAttribute="bottomMargin" secondItem="qP8-oL-DIz" secondAttribute="bottom" constant="-14" id="SMb-ug-WM8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ewa-WH-tjo" secondAttribute="trailing" constant="55" id="UDM-dr-zU7"/>
                             <constraint firstItem="b0f-Wi-eg7" firstAttribute="top" secondItem="Buc-FZ-lfI" secondAttribute="bottom" constant="30" id="Ums-KG-zOf"/>
@@ -320,7 +322,6 @@
                             <constraint firstItem="ewa-WH-tjo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="566" id="cEM-Kn-hyv"/>
                             <constraint firstItem="IPv-6R-z2x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="dGs-Kb-4IO"/>
                             <constraint firstItem="qWP-Nj-9Tv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="f4l-b5-qvj"/>
-                            <constraint firstItem="72N-2w-h0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="fq7-tj-6BT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IPv-6R-z2x" secondAttribute="trailing" constant="39" id="hg7-jQ-wd8"/>
                             <constraint firstItem="ewa-WH-tjo" firstAttribute="leading" secondItem="dx8-1M-CJZ" secondAttribute="trailing" constant="79" id="jYP-gf-jwg"/>
                             <constraint firstItem="b0f-Wi-eg7" firstAttribute="leading" secondItem="d4g-0n-Zwn" secondAttribute="trailing" constant="79" id="l0O-7b-bkW"/>
@@ -331,6 +332,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O3W-dI-TJQ" secondAttribute="bottom" constant="132" id="uYI-9N-cff"/>
                             <constraint firstItem="qP8-oL-DIz" firstAttribute="top" secondItem="ewa-WH-tjo" secondAttribute="bottom" constant="79" id="v0Q-X1-o5y"/>
                             <constraint firstItem="FkM-8i-uck" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="w2F-l9-FDI"/>
+                            <constraint firstItem="IPv-6R-z2x" firstAttribute="top" secondItem="72N-2w-h0M" secondAttribute="bottom" constant="56" id="xym-At-jz8"/>
                             <constraint firstItem="qP8-oL-DIz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="246" id="zAZ-P5-OXU"/>
                             <constraint firstItem="Buc-FZ-lfI" firstAttribute="leading" secondItem="qWP-Nj-9Tv" secondAttribute="trailing" constant="79" id="zFu-37-1Ab"/>
                         </constraints>
@@ -372,6 +374,20 @@
                                     <action selector="close" destination="R69-rr-lHQ" eventType="touchUpInside" id="ctY-RP-BOm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-KF-hvb">
+                                <rect key="frame" x="313" y="168" width="46" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="si2-q5-J3y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1D-fU-whv">
+                                <rect key="frame" x="317" y="90" width="38" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="hcM-Oi-3Pf" kind="show" id="XyP-3i-tFs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xFc-lS-FJx"/>
@@ -411,7 +427,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="SearchBar"/>
                                         <connections>
-                                            <segue destination="jTt-xe-03H" kind="show" id="Gkd-RT-aww"/>
+                                            <segue destination="jTt-xe-03H" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Gkd-RT-aww"/>
                                         </connections>
                                     </button>
                                     <barButtonItem key="rightBarButtonItem" image="Menu" style="plain" id="e3J-3f-iJO">
@@ -643,8 +659,9 @@
         <image name="space" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z2W-5v-I2c"/>
+        <segue reference="xWr-5p-eZl"/>
         <segue reference="sm8-GL-BxI"/>
+        <segue reference="tAK-a6-hRZ"/>
         <segue reference="C7E-aY-uvq"/>
     </inferredMetricsTieBreakers>
 </document>
