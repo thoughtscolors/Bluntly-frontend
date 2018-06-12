@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var pass: UITextField!
     
-    var user: UserViewController!
+    var userViewController: UserViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func login() {
         let newEmail = emailField.text
-        user.email = newEmail!
+        print("in login", userViewController.email)
+        userViewController.email = newEmail!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let interestsViewController = segue.destination as? InterestsViewController {
-            interestsViewController.user = UserViewController()
+            interestsViewController.userViewController = userViewController
         }
     }
     

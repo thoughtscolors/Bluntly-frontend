@@ -10,7 +10,7 @@ import UIKit
 
 class UserViewController: UIViewController {
     
-    var email: String = ""
+    var email: String = "meow"
 
     override func viewDidLoad() {
         super.viewDidLoad()

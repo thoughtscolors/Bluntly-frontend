@@ -23,7 +23,7 @@ class InterestsViewController: UIViewController {
     
     @IBOutlet weak var searchField: UITextField!
     
-    var user: UserViewController!
+    var userViewController: UserViewController!
     
     var icons: [IconDetails]! {
         didSet {
@@ -64,7 +64,7 @@ class InterestsViewController: UIViewController {
     
     func addInterest() {
         let name = searchField.text
-        let email = user.email
+        let email = userViewController.email
         print("email", email)
         let userID = "123qwer"
         let addInterest = AddInterestMutation(userID: userID, name: name!)
