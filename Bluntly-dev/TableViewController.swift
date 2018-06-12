@@ -15,15 +15,30 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellLocation: UILabel!
     @IBOutlet weak var cellDate: UILabel!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var ticketsButton: UIButton!
+    
+    @IBOutlet var urlString: String!
+    
+    
+    @IBAction func addToMyEvents() {
+        
+    }
+    
+    
+    @IBAction func openEventbrite(_ sender: UIButton) {
+//        let TableController = TableViewController()
+//        let index = sender.tag
+        
+        let eventUrl = urlString
+        let url = URL(string: eventUrl!)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
+
 }
 
 class TableViewController: UITableViewController {
     
-    var fruits = ["Apple", "Apricot", "Banana", "Blueberry", "Cantaloupe", "Cherry",
-                  "Clementine", "Coconut", "Cranberry", "Fig", "Grape", "Grapefruit",
-                  "Kiwi fruit", "Lemon", "Lime", "Lychee", "Mandarine", "Mango",
-                  "Melon", "Nectarine", "Olive", "Orange", "Papaya", "Peach",
-                  "Pear", "Pineapple", "Raspberry", "Strawberry"]
     
     var events: [EventDetails]! {
         didSet {
@@ -51,6 +66,16 @@ class TableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func openLink(index: Int!) {
+        print(index)
+        guard let events = self.events else { return }
+        let event = events[index]
+        print(event)
+        let eventUrl = event.url
+        let url = URL(string: eventUrl!)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
 
     // MARK: - Table view data source
@@ -81,7 +106,7 @@ class TableViewController: UITableViewController {
         cell.cellTitle?.text = eventDetails.name?.text
         cell.cellLocation.text = eventDetails.venue?.name
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE, MMM d, yyyy, HH:mm"
+        formatter.dateFormat = "EEE MMM d, yyyy - HH:mm"
         let formatterGet = DateFormatter()
         formatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         formatter.locale = Locale(identifier: "en_US")
@@ -90,13 +115,14 @@ class TableViewController: UITableViewController {
             eventDate = (eventDetails.start?.local)!
         }
         let date = formatterGet.date(from: eventDate)
-        print(date)
         if (date != nil) {
             cell.cellDate.text = formatter.string(from: date!)
         } else {
             cell.cellDate.text = formatter.string(from: date!)
         }
-        
+        cell.ticketsButton.tag = indexPath.row
+        let urlString = eventDetails.url
+        cell.urlString = urlString
         
         return cell
     }
