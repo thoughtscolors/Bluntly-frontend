@@ -45,6 +45,12 @@ class InterestsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tableViewController = segue.destination as? TableViewController {
+            tableViewController.userViewController = userViewController
+        }
+    }
+    
     @IBAction func changeSearchBackground () {
         let image = #imageLiteral(resourceName: "SearchBarSelected")
         searchField.background = image
@@ -64,9 +70,8 @@ class InterestsViewController: UIViewController {
     
     func addInterest() {
         let name = searchField.text
-        let email = userViewController.email
-        print("email", email)
-        let userID = "123qwer"
+        let userID = userViewController.email
+        print("interests", userID)
         let addInterest = AddInterestMutation(userID: userID, name: name!)
         apollo.perform(mutation: addInterest) { [weak self] result, error in guard let result = result?.data?.addInterest else { return }
             if let error = error {

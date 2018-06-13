@@ -50,6 +50,14 @@
                                 <rect key="frame" x="67" y="141" width="240" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX5-cZ-6Tf">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="cQT-NZ-qu3" kind="presentation" id="peS-Ky-Wfa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -67,7 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="Mpx-uu-usP" id="c0P-Wo-4aa"/>
-                        <outlet property="pass" destination="ADH-YL-lLY" id="KIn-zh-yVv"/>
+                        <outlet property="passField" destination="ADH-YL-lLY" id="1dq-M6-s4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqy-q1-KYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,7 +117,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooD-Ac-sX8">
-                                <rect key="frame" x="26" y="28" width="30" height="48"/>
+                                <rect key="frame" x="26" y="39" width="30" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7tA-x1-874"/>
+                                    <constraint firstAttribute="width" constant="30" id="BaM-R5-gpB"/>
+                                </constraints>
                                 <state key="normal" image="BackButton">
                                     <color key="titleColor" red="0.93289365059999996" green="0.17438356050000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -117,19 +129,39 @@
                                     <segue destination="Jwo-uc-h21" kind="show" id="S9P-YE-cgq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E87-qI-Djm">
-                                <rect key="frame" x="323" y="37" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E87-qI-Djm">
+                                <rect key="frame" x="318" y="48" width="36" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19764019691780821" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="83E-Xk-xSs"/>
+                                    <constraint firstAttribute="height" constant="30" id="WQA-iB-epJ"/>
+                                </constraints>
                                 <state key="normal" image="Menu"/>
+                                <connections>
+                                    <segue destination="R69-rr-lHQ" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="B4c-Ax-ial"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9r-mv-z58">
+                                <rect key="frame" x="96" y="459" width="184" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Search Events">
+                                    <color key="titleColor" red="0.93289365059999996" green="0.17438356050000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jTt-xe-03H" kind="presentation" modalTransitionStyle="crossDissolve" id="dzt-Bd-HYu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ooD-Ac-sX8" firstAttribute="top" secondItem="J0E-7S-y9X" secondAttribute="top" constant="28" id="GUu-vl-FYj"/>
-                            <constraint firstItem="idz-Ta-c08" firstAttribute="trailing" secondItem="ooD-Ac-sX8" secondAttribute="trailing" constant="319" id="gfS-sm-xyR"/>
-                            <constraint firstItem="idz-Ta-c08" firstAttribute="bottom" secondItem="ooD-Ac-sX8" secondAttribute="bottom" constant="702" id="i7e-FE-taj"/>
-                            <constraint firstItem="ooD-Ac-sX8" firstAttribute="leading" secondItem="idz-Ta-c08" secondAttribute="leading" constant="26" id="yWe-tx-rpd"/>
+                            <constraint firstItem="idz-Ta-c08" firstAttribute="bottom" secondItem="ooD-Ac-sX8" secondAttribute="bottom" constant="691" id="Gri-UG-8M1"/>
+                            <constraint firstItem="ooD-Ac-sX8" firstAttribute="leading" secondItem="idz-Ta-c08" secondAttribute="leading" constant="26" id="JYr-WJ-oWu"/>
+                            <constraint firstItem="idz-Ta-c08" firstAttribute="bottom" secondItem="E87-qI-Djm" secondAttribute="bottom" constant="700" id="Thu-GH-rF7"/>
+                            <constraint firstItem="E87-qI-Djm" firstAttribute="leading" secondItem="ooD-Ac-sX8" secondAttribute="trailing" constant="262" id="Wbs-zZ-rXr"/>
+                            <constraint firstItem="idz-Ta-c08" firstAttribute="trailing" secondItem="E87-qI-Djm" secondAttribute="trailing" constant="21" id="f3f-6T-tfO"/>
+                            <constraint firstItem="ooD-Ac-sX8" firstAttribute="top" secondItem="J0E-7S-y9X" secondAttribute="topMargin" constant="-5" id="lya-d3-KBp"/>
+                            <constraint firstItem="E87-qI-Djm" firstAttribute="top" secondItem="idz-Ta-c08" secondAttribute="top" constant="4" id="oBr-i9-OZl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="idz-Ta-c08"/>
                     </view>
@@ -427,12 +459,15 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WPa-Bs-fqn">
-                                        <rect key="frame" x="90.666666666666686" y="5" width="194" height="34"/>
+                                    <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MA5-lN-Lb0">
+                                        <rect key="frame" x="125.66666666666669" y="1.6666666666666679" width="124" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="SearchBar"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title=" Search" image="Search">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.1914865154109589" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="jTt-xe-03H" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Gkd-RT-aww"/>
+                                            <segue destination="jTt-xe-03H" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2zR-8t-gJU"/>
                                         </connections>
                                     </button>
                                     <barButtonItem key="rightBarButtonItem" image="Menu" style="plain" id="e3J-3f-iJO">
@@ -549,7 +584,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izt-Ku-cqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="521"/>
+            <point key="canvasLocation" x="36" y="520.93596059113304"/>
         </scene>
         <!--Search Events View Controller-->
         <scene sceneID="tIH-g8-hOt">
@@ -559,18 +594,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="Scs-eQ-Y9d">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textField key="tableHeaderView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search...." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="EGx-k1-WxP">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <edgeInsets key="layoutMargins" top="8" left="50" bottom="8" right="50"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             <connections>
-                                <outlet property="delegate" destination="HPk-00-ZIZ" id="FwR-tQ-Gou"/>
+                                <action selector="searchBarTextDidEndEditing" destination="jTt-xe-03H" eventType="primaryActionTriggered" id="aXZ-Gr-lCC"/>
                             </connections>
-                        </searchBar>
+                        </textField>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="258" id="cIL-nz-Tab" customClass="SearchViewCell" customModule="Bluntly_dev" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="258"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="258"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cIL-nz-Tab" id="gsu-gh-m9e">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="257.66666666666669"/>
@@ -644,6 +681,9 @@
                             <outlet property="delegate" destination="jTt-xe-03H" id="SDD-zI-35q"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchTextField" destination="EGx-k1-WxP" id="p9R-6x-gUb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6o-0Q-6v6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -659,14 +699,16 @@
         <image name="Menu" width="36" height="30"/>
         <image name="MenuOpen" width="68" height="258"/>
         <image name="Plus" width="64" height="64"/>
+        <image name="Search" width="22" height="22"/>
         <image name="SearchBar" width="180" height="34"/>
         <image name="Tickets" width="48" height="48"/>
         <image name="space" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z2W-5v-I2c"/>
-        <segue reference="BrK-rP-71L"/>
-        <segue reference="Rpf-Zg-3R7"/>
-        <segue reference="p8k-hE-YtR"/>
+        <segue reference="2zR-8t-gJU"/>
+        <segue reference="xWr-5p-eZl"/>
+        <segue reference="sm8-GL-BxI"/>
+        <segue reference="tAK-a6-hRZ"/>
+        <segue reference="C7E-aY-uvq"/>
     </inferredMetricsTieBreakers>
 </document>

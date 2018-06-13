@@ -40,6 +40,8 @@ class TableViewCell: UITableViewCell {
 }
 
 class TableViewController: UITableViewController {
+    
+    var userViewController: UserViewController!
 
     var events: [EventDetails]! {
         didSet {
@@ -49,9 +51,10 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let userID = userViewController.email
+        print("tableView", userID)
         let sv = UIViewController.displaySpinner(onView: self.view)
-        apollo.fetch(query: AllEventsQuery(userID: "123qwer")) { [weak self] result, error in
+        apollo.fetch(query: AllEventsQuery(userID: userID)) { [weak self] result, error in
             guard let events = result?.data?.allEventbrite else { return }
             self?.events = events.map { ($0?.fragments.eventDetails)! }
             UIViewController.removeSpinner(spinner: sv)
@@ -70,10 +73,6 @@ class TableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-
     
     func openLink(index: Int!) {
         print(index)

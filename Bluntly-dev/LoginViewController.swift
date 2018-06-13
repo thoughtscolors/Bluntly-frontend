@@ -11,7 +11,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var pass: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    
     
     var userViewController: UserViewController!
     
@@ -28,8 +29,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func login() {
         let newEmail = emailField.text
-        print("in login", userViewController.email)
-        userViewController.email = newEmail!
+        let newPass = passField.text
+        
+        let register = LoginMutation(email: newEmail!, pass: newPass!)
+        apollo.perform(mutation: register) { [weak self] result, error in guard let result = result?.data?.register else { return }
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            self?.userViewController.email = newEmail!
+            return
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

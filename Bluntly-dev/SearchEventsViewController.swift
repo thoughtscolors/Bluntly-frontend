@@ -17,13 +17,21 @@ class SearchViewCell: UITableViewCell {
     @IBOutlet weak var searchDate: UILabel!
 }
 
-class search: UISearchController {
+class searchBar: UISearchBar {
+    let searchViewController = SearchEventsViewController()
+    
+    @IBAction func searchEvents() {
+        searchViewController.searchBarTextDidEndEditing()
+    }
+    
     
 }
 
 class SearchEventsViewController: UITableViewController {
     
-    @IBOutlet weak var text: UISearchBar!
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchBar: searchBar!
     
     var searchEvents: [EventDetails]! {
         didSet {
@@ -32,11 +40,11 @@ class SearchEventsViewController: UITableViewController {
     }
    
     
-    func searchBarTextDidEndEditing(_ sender: UISearchBar) {
+    @IBAction func searchBarTextDidEndEditing() {
         print("in search")
-        guard let name = sender.text else {return}
+        let name = searchTextField.text
         print(name)
-        apollo.fetch(query: EventsQuery(name: name)) { [weak self] result, error in
+        apollo.fetch(query: EventsQuery(name: name!)) { [weak self] result, error in
             guard let events = result?.data?.eventbrite else { return }
             self?.searchEvents = events.map { ($0?.fragments.eventDetails)! }
         }
@@ -47,10 +55,11 @@ class SearchEventsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apollo.fetch(query: EventsQuery(name: "deep house")) { [weak self] result, error in
-            guard let events = result?.data?.eventbrite else { return }
-            self?.searchEvents = events.map { ($0?.fragments.eventDetails)! }
-        }
+//        searchBar.text = "search this"
+//        apollo.fetch(query: EventsQuery(name: "deep house")) { [weak self] result, error in
+//            guard let events = result?.data?.eventbrite else { return }
+//            self?.searchEvents = events.map { ($0?.fragments.eventDetails)! }
+//        }
         
     }
         

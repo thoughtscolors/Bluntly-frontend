@@ -24,6 +24,7 @@
 		18958F5F20CF207200B14010 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F5E20CF207200B14010 /* MenuViewController.swift */; };
 		18958F6120CF2E7900B14010 /* SearchEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F6020CF2E7900B14010 /* SearchEventsViewController.swift */; };
 		18958F6720D0846300B14010 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18958F6620D0846300B14010 /* UserViewController.swift */; };
+		18958F6920D0D6C100B14010 /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 18958F6820D0D6C100B14010 /* Login.graphql */; };
 		CD538552D8662C9718572A68 /* Pods_Bluntly_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		18958F5E20CF207200B14010 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		18958F6020CF2E7900B14010 /* SearchEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventsViewController.swift; sourceTree = "<group>"; };
 		18958F6620D0846300B14010 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		18958F6820D0D6C100B14010 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		9437ECB9BFB8BAF3066AE44C /* Pods-Bluntly-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		D371F233610D78A91D13BE6B /* Pods-Bluntly-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluntly-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluntly-dev/Pods-Bluntly-dev.release.xcconfig"; sourceTree = "<group>"; };
 		D6F70EAB2134200845ECFD3B /* Pods_Bluntly_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bluntly_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 				1889D44420C665C600E060E2 /* API.swift */,
 				1889D43E20C6627100E060E2 /* Events.graphql */,
 				1889D44020C6627D00E060E2 /* Icons.graphql */,
+				18958F6820D0D6C100B14010 /* Login.graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1889D43D20C6610700E060E2 /* Podfile in Resources */,
 				1889D43F20C6627100E060E2 /* Events.graphql in Resources */,
 				1889D3F920C38DC500E060E2 /* LaunchScreen.storyboard in Resources */,
+				18958F6920D0D6C100B14010 /* Login.graphql in Resources */,
 				1889D42120C3ACD700E060E2 /* CarroisGothic-Regular.ttf in Resources */,
 				1889D41F20C39AA400E060E2 /* Assets.xcassets in Resources */,
 				1889D44120C6627D00E060E2 /* Icons.graphql in Resources */,
