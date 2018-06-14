@@ -15,6 +15,24 @@ class SearchViewCell: UITableViewCell {
     @IBOutlet weak var searchTitle: UILabel!
     @IBOutlet weak var searchLocation: UILabel!
     @IBOutlet weak var searchDate: UILabel!
+    @IBOutlet var urlString: String!
+    
+    
+    
+    
+    @IBAction func addToMyEvents() {
+        
+    }
+    
+    
+    @IBAction func openEventbrite(_ sender: UIButton) {
+        //        let TableController = TableViewController()
+        //        let index = sender.tag
+        
+        let eventUrl = urlString
+        let url = URL(string: eventUrl!)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
 }
 
 class searchBar: UISearchBar {
@@ -69,6 +87,15 @@ class SearchEventsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     
+    func openLink(index: Int!) {
+        print(index)
+        guard let events = self.searchEvents else { return }
+        let event = events[index]
+        print(event)
+        let eventUrl = event.url
+        let url = URL(string: eventUrl!)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,6 +144,8 @@ class SearchEventsViewController: UITableViewController {
         } else {
             cell.searchDate.text = formatter.string(from: date!)
         }
+        let urlString = eventDetails.url
+        cell.urlString = urlString
         
         
         return cell

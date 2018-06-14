@@ -425,6 +425,13 @@
                                     <segue destination="hcM-Oi-3Pf" kind="show" id="XyP-3i-tFs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17t-zg-X3f">
+                                <rect key="frame" x="313" y="212" width="46" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="cQT-NZ-qu3" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bYj-ol-uMe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xFc-lS-FJx"/>
@@ -650,8 +657,28 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hj-GL-aac">
+                                            <rect key="frame" x="333" y="219" width="36" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="GaF-fq-fGQ"/>
+                                                <constraint firstAttribute="height" constant="36" id="mbp-Rv-dKm"/>
+                                            </constraints>
+                                            <state key="normal" image="Tickets"/>
+                                            <connections>
+                                                <action selector="openEventbrite:" destination="cIL-nz-Tab" eventType="touchUpInside" id="6jy-D4-Rbh"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj6-GN-Sz3">
+                                            <rect key="frame" x="295" y="220" width="34" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="1mK-tI-reu"/>
+                                                <constraint firstAttribute="width" constant="34" id="VxT-YX-fkf"/>
+                                            </constraints>
+                                            <state key="normal" image="Plus"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="5Hj-GL-aac" firstAttribute="top" secondItem="XI4-hf-GCT" secondAttribute="bottom" constant="5" id="3Uf-Fo-jay"/>
                                         <constraint firstItem="Vt9-6t-8nS" firstAttribute="leading" secondItem="gsu-gh-m9e" secondAttribute="leadingMargin" constant="-16" id="4Hg-Zq-cie"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="XI4-hf-GCT" secondAttribute="trailing" constant="-32" id="4y9-VN-Zrt"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Vt9-6t-8nS" secondAttribute="trailing" constant="-16" id="6m2-dn-oc4"/>
@@ -661,10 +688,16 @@
                                         <constraint firstItem="pBg-YR-HQ7" firstAttribute="trailing" secondItem="gsu-gh-m9e" secondAttribute="trailingMargin" id="MI4-3c-AES"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="yQd-ek-bpT" secondAttribute="bottom" constant="-6" id="O2b-zL-aBI"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="pBg-YR-HQ7" secondAttribute="bottom" constant="14" id="QH4-TF-G19"/>
+                                        <constraint firstItem="nj6-GN-Sz3" firstAttribute="top" secondItem="XI4-hf-GCT" secondAttribute="bottom" constant="6" id="QlX-2U-ZY1"/>
+                                        <constraint firstAttribute="bottom" secondItem="nj6-GN-Sz3" secondAttribute="bottom" constant="3.6666666666666856" id="Rwb-vr-nR9"/>
                                         <constraint firstItem="Vt9-6t-8nS" firstAttribute="top" secondItem="gsu-gh-m9e" secondAttribute="topMargin" constant="-11" id="S6q-gQ-0Xo"/>
                                         <constraint firstItem="XI4-hf-GCT" firstAttribute="leading" secondItem="gsu-gh-m9e" secondAttribute="leadingMargin" id="TPj-kw-jDc"/>
                                         <constraint firstItem="yQd-ek-bpT" firstAttribute="trailing" secondItem="gsu-gh-m9e" secondAttribute="trailingMargin" id="WxQ-V1-14c"/>
                                         <constraint firstItem="pBg-YR-HQ7" firstAttribute="top" secondItem="Vt9-6t-8nS" secondAttribute="bottom" constant="26" id="dbs-St-jjB"/>
+                                        <constraint firstItem="nj6-GN-Sz3" firstAttribute="leading" secondItem="gsu-gh-m9e" secondAttribute="leading" constant="295" id="l7u-e9-ob4"/>
+                                        <constraint firstAttribute="bottom" secondItem="5Hj-GL-aac" secondAttribute="bottom" constant="2.6666666666666856" id="nF5-fC-VzD"/>
+                                        <constraint firstItem="5Hj-GL-aac" firstAttribute="leading" secondItem="nj6-GN-Sz3" secondAttribute="trailing" constant="4" id="qne-0m-tuc"/>
+                                        <constraint firstAttribute="trailing" secondItem="5Hj-GL-aac" secondAttribute="trailing" constant="6" id="rze-XY-7xE"/>
                                         <constraint firstItem="yQd-ek-bpT" firstAttribute="top" secondItem="XI4-hf-GCT" secondAttribute="bottom" constant="18" id="zGo-NC-3qx"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -706,10 +739,10 @@
         <image name="space" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dzt-Bd-HYu"/>
-        <segue reference="xWr-5p-eZl"/>
-        <segue reference="B4c-Ax-ial"/>
-        <segue reference="Rpf-Zg-3R7"/>
-        <segue reference="peS-Ky-Wfa"/>
+        <segue reference="2zR-8t-gJU"/>
+        <segue reference="XyP-3i-tFs"/>
+        <segue reference="sm8-GL-BxI"/>
+        <segue reference="si2-q5-J3y"/>
+        <segue reference="C7E-aY-uvq"/>
     </inferredMetricsTieBreakers>
 </document>
