@@ -18,7 +18,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let bottomLine = CALayer()
+//        bottomLine.frame = CGRect(x: 0, y: emailField.frame.height - 1, width: emailField.frame.width, height: 5)
+//        bottomLine.backgroundColor = UIColor.white.cgColor // background color
+//        emailField.borderStyle = UITextBorderStyle.none // border style
+//        emailField.layer.addSublayer(bottomLine)
         // Do any additional setup after loading the view.
     }
 
@@ -46,6 +50,11 @@ class LoginViewController: UIViewController {
         if let interestsViewController = segue.destination as? InterestsViewController {
             interestsViewController.userViewController = userViewController
         }
+    }
+    
+    func setBottomBorderToTextFields()  {
+        
+        
     }
     
 
